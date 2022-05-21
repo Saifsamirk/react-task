@@ -20,7 +20,11 @@ function NumbersPad() {
     <div className="numbers-pad">
       {numbers.map((number) => {
         return (
-          <span key={number.value} onClick={() => handleClick(number)}>
+          <span
+            key={number.value}
+            onClick={() => handleClick(number)}
+            className="action-btn clicked"
+          >
             {number.label}
           </span>
         );

@@ -36,7 +36,20 @@
   width: 60%;
 }
 
-.numbers-pad span {
+.operations-pad {
+  display: flex;
+  justify-content: center;
+}
+
+.operations-pad span {
+  cursor: pointer;
+  background-color: aquamarine !important;
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+.action-btn {
   cursor: pointer;
   background-color: #fffaa0;
   padding: 20px;
@@ -44,7 +57,7 @@
 
 /* scale the button down when it is clicked to give the indication
 to users that it's being clicked  */
-.numbers-pad span:active {
+.clicked:active {
   transform: scale(0.95);
 }
 

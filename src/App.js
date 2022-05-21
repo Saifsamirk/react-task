@@ -11,6 +11,7 @@ function App() {
         <h1>Custom Calculator</h1>
         <DisplayPad />
         <NumbersPad />
+        <hr />
         <OperationsPad />
       </div>
     </AppProvider>

@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { operations } from "../constants";
+import "../App.css";
 
 function OpertaionsPad() {
-  return <h1>This is the calculator mathematical operations pad</h1>;
+  return (
+    <div className="operations-pad">
+      {operations.map(({ label }) => {
+        return (
+          <span key={label} className="clicked">
+            {label}
+          </span>
+        );
+      })}
+    </div>
+  );
 }
 
 export default OpertaionsPad;
