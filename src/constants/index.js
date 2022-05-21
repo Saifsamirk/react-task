@@ -14,10 +14,12 @@ export const numbers = [
 export const operations = [
   {
     label: "+",
+    value: "add",
     onClick: () => console.log("Add"),
   },
   {
     label: "=",
+    value: "equal",
     onClick: () => console.log("Equal"),
   },
 ];
