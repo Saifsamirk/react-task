@@ -6,9 +6,14 @@ import "../App.css";
 function NumbersPad() {
   const { result, setResult } = useContext(AppContext);
   // Create a function that handles the click on the calculator actions
-  const handleClick = ({ value }) => {
+  const handleClick = ({ value, label }) => {
+    // Check if the number inserted is 0 and also the display is 0 so
+    // don't do anything
+    if (result === "0" && label === "0") {
+      return;
+    }
     // Enable the option of adding a series of digits
-    const newValue = `${result + value}`;
+    const newValue = result === 0 ? Number(label) : result + label;
     setResult(newValue);
   };
   return (
