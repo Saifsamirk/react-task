@@ -4,7 +4,7 @@ import AppContext from "../context";
 import "../App.css";
 
 function OpertaionsPad() {
-  const { result, setResult } = useContext(AppContext);
+  const { result, setResult, setIsFinished } = useContext(AppContext);
   // Create a function to check if the plus can be added or not and then
   // display the current operation properly
   const handleAdd = (label) => {
@@ -27,6 +27,8 @@ function OpertaionsPad() {
       .reduce((prev, curr) => Number(prev) + Number(curr));
     // Set the final result with the sum
     setResult(sum);
+    // Set the finished flag to true
+    setIsFinished(true);
   };
 
   const process = {
