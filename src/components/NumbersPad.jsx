@@ -17,7 +17,7 @@ function NumbersPad() {
       // Check if the isFinished flag is true so that means we need
       // to clear the result to start a new operation
       if (isFinished) {
-        setResult(label);
+        setResult(value);
         setIsFinished(false);
         return;
       }
