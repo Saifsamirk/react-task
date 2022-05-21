@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import AppContext from "../context";
 import "../App.css";
 
-function DisplayPad({ result = 0 }) {
+function DisplayPad() {
+  const { result } = useContext(AppContext);
   return <div className="display-pad">{result}</div>;
 }
 

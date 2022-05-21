@@ -37,8 +37,19 @@
 }
 
 .numbers-pad span {
+  cursor: pointer;
   background-color: #fffaa0;
   padding: 20px;
+}
+
+/* scale the button down when it is clicked to give the indication
+to users that it's being clicked  */
+.numbers-pad span:active {
+  transform: scale(0.95);
+}
+
+.numbers-pad span:hover {
+  background-color: #f5e910;
 }
 
 .display-pad {
