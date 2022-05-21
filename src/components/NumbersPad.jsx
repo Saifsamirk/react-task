@@ -8,7 +8,7 @@ function NumbersPad() {
     useContext(AppContext);
   // Create a function that handles the click on the calculator actions
   const handleClick = useCallback(
-    ({ label }) => {
+    ({ label, value }) => {
       // Check if the number inserted is 0 and also the display is 0 so
       // don't do anything
       if (result === "0" && label === "0") {
@@ -22,7 +22,7 @@ function NumbersPad() {
         return;
       }
       // Enable the option of adding a series of digits
-      const newValue = result === 0 ? Number(label) : result + label;
+      const newValue = result === 0 ? value : result + label;
       setResult(newValue);
     },
     [result, setResult, isFinished, setIsFinished]
