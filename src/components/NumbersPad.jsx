@@ -7,7 +7,9 @@ function NumbersPad() {
   const { result, setResult } = useContext(AppContext);
   // Create a function that handles the click on the calculator actions
   const handleClick = ({ value }) => {
-    setResult(value);
+    // Enable the option of adding a series of digits
+    const newValue = `${result + value}`;
+    setResult(newValue);
   };
   return (
     <div className="numbers-pad">
