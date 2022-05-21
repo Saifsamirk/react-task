@@ -28,6 +28,26 @@
   color: #61dafb;
 }
 
+.numbers-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: auto;
+  width: 60%;
+}
+
+.numbers-pad span {
+  background-color: #fffaa0;
+  padding: 20px;
+}
+
+.display-pad {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 20px auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
